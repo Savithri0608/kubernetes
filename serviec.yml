@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: python-django
 spec:
+  type: NodePort
   selector:
     app: python-sample-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 9376
+      nodePort: 30036
